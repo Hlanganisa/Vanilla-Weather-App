@@ -11,14 +11,75 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
     crossorigin="anonymous"
 />
-    <title> Document</title>
+    <title> Weather-App</title>
 </head>
 <body>
    <div class="container"> 
- <h1>
-    Hello
+   <div class="weather-app">
+        <form class="search-form" id="search-form">
+        <div class="row">
+        <div class="col-9">
+        <input
+            type="search"
+            placeholder="Type a city.."
+            autofocus="on"
+            autocomplete="off"
+            id="city-input"
+            class="form-control shadow-sm">
+    </div>
+    <div class="col-3">
+        <input
+            type="submit"
+            value="Search"
+            class="form-control btn btn-primary shadow-sm">
+    </div>
+    </div>
+    </form>
+ <h1 id="city">
+    Mpumalanga
  </h1>   
- <a href= "" class="btn btn-primary">click me</a>
+ <ul>
+ <li>
+    Sunday 13:00
+ </li>
+ <li>
+    Partly Cloudy
+ </li>
+ </ul>
+ <div class="row">
+ <div class="col-6">
+ <div class="d-flex">
+ <img 
+ src = "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+ alt="Cloudy icon"
+ class="weather-icon"> 
+ <div class="d-flex">
+    <span class="temperature" id="temperature">30</span
+    >
+    <span class="units">
+    <a href="#" id="celsius-link">°C</a> |
+    <a href="#" id="fahrenheit-link">°F</a>
+    </span>
+</div>
+</div>
+</div>
+<div class="col-6">
+ </ul>
+ <li>Precipitation: 0%</li>
+ <li>Humidity: 73%</li>
+ <li>Wind: 10 km/h</li>
+ </ul>
+ </div>
+ </div>
+ <small>
+    <a href="https://github.com/Hlanganisa/Vanilla-Weather-App"  
+    target="_blank"
+    >open source code</a
+    >
+    by Hlanganisa Nazo
+ </small>
+ </div>
+ </div>
  </div>
 <script>src="src/app.js"</script>
 </body>
