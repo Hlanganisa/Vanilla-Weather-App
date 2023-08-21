@@ -88,8 +88,9 @@ li {
  <div class="col-6">
  <div class="clearfix">
  <img 
- src = "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
- alt="Cloudy icon"
+ src = "https://openweathermap.org/img/wn/01d@2x.png"
+ alt="Sunny icon"
+ id="icon"
  class="weather-icon float-left"
  /> 
  <div class="float-left">
@@ -103,7 +104,6 @@ li {
 </div>
 <div class="col-6">
  </ul>
- <li>Precipitation: <span id="precipitation">%</span></li>
  <li>Humidity: <span id="humidity">%</span></li>
  <li>Wind: <span id="wind"></span> km/h</li>
  </ul>
@@ -150,6 +150,7 @@ li {
   function searchCity(city) {
     let apiKey = "9159b2aab66d3679aa7c0c2915aadce4";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let apiiconUrl = 'https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png'
     axios.get(apiUrl).then(showTemperature);
   }
   function showTemperature(response) {
@@ -200,6 +201,8 @@ li {
   let currentLocationButton = document.querySelector("#current-location-button");
   currentLocationButton.addEventListener("click", currentLocation);
   
-</script>
-</body>
-</html>
+  let iconElement = document.querySelector("#icon");
+  iconElement.innerHTML = iconElement.value;
+ </script>  
+ </body>
+ </html>

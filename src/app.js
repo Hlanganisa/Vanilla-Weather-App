@@ -80,8 +80,4 @@ function formatDate(date) {
   let currentLocationButton = document.querySelector("#current-location-button");
   currentLocationButton.addEventListener("click", currentLocation);
 
-let iconElement = document.querySelector("#icon")
-iconElement. setAttribute("src",
-'https://samples.openweathermap.org/data/2.5/weather?q=Mpumalanga&appid=b1b15e88fa797225412429c1c50c122a1'
-);
 
